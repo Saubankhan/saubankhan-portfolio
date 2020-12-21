@@ -1,0 +1,339 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  background: linear-gradient(#18121e, #334c55);
+  font-family: "Roboto", sans-serif;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+nav a:hover {
+  background-color: rgb(101, 201, 55);
+  display: inline-block;
+  padding: 4px;
+  border-radius: 2px;
+}
+nav {
+  position: fixed;
+  background: linear-gradient(to top, #18121e, #334c55, #18121e);
+  padding: 5px 20px 5px 0px;
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+nav img {
+  width: 140px;
+  display: inline-block;
+}
+nav div {
+  font-family: "Grenze Gotisch", cursive;
+  margin-left: 20px;
+  color: wheat;
+}
+nav div small {
+  margin-left: -2px;
+  font-size: 16px;
+}
+.label1 {
+  display: none;
+}
+.label1 i {
+  color: white;
+  font-size: 32px;
+}
+.label2 i {
+  color: white;
+  font-size: 32px;
+}
+.label2 {
+  display: none;
+}
+ul {
+  text-transform: uppercase;
+  list-style: none;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about {
+  position: relative;
+  top: 14vh;
+}
+input {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .label1 {
+    display: block;
+  }
+  nav {
+    flex-direction: row-reverse;
+  }
+  ul {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    height: 50vh;
+    width: 50%;
+    background: linear-gradient(to top, #18121e, #334c55, #18121e);
+    flex-direction: column;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: 1s ease-in;
+  }
+
+  #check:checked ~ ul {
+    transform: translateX(0%);
+  }
+  #check:checked ~ .label1 {
+    display: none;
+  }
+  #check:checked ~ .label2 {
+    display: block;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(#18121e, #334c55);
+}
+.profile {
+  position: relative;
+  top: 80px;
+  text-align: center;
+  color: whitesmoke;
+  padding: 20px;
+  font-size: 2rem;
+}
+.profile img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+.profile h1 {
+  text-align: left;
+  color: whitesmoke;
+  font-size: 2.2rem;
+}
+.profile span {
+  color: rgb(214, 37, 90);
+}
+.profile p {
+  text-align: left;
+  font-size: 16px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+  color: aqua;
+}
+.self {
+  padding: 20px;
+  margin-top: 70px;
+}
+.self h1 {
+  color: rgb(129, 189, 230);
+  text-align: center;
+  font-size: 34px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.myself {
+  color: white;
+  line-height: 30px;
+  font-size: 18px;
+}
+.myself span {
+  color: rgb(214, 37, 90);
+  font-size: 24px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.education {
+  margin: 20px 0 20px 0;
+  color: white;
+  line-height: 30px;
+}
+.education h1 {
+  margin-bottom: 10px;
+}
+.my-skills > h1 {
+  color: rgb(129, 189, 230);
+  text-align: center;
+  font-size: 34px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.skills {
+  text-align: center;
+  list-style: none;
+}
+.skills div {
+  padding: 20px;
+  /* margin-top: 8px; */
+}
+.skills div h1 {
+  font-family: sans-serif;
+  background-color: rgb(4, 19, 17);
+  padding: 8px;
+  border-radius: 5px;
+  color: antiquewhite;
+}
+.skills h3 {
+  color: aqua;
+  margin-bottom: 10px;
+}
+
+.skills li {
+  margin: 20px 0;
+  text-align: left;
+  font-size: 1.5rem;
+}
+#skill {
+  text-align: center;
+  font-family: cursive;
+  margin-top: 10px;
+}
+.bar {
+  background: rgb(223, 229, 231);
+  display: block;
+  height: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgb(27, 25, 24);
+}
+.bar span {
+  height: 20px;
+  float: left;
+  background: rgb(221, 52, 94);
+}
+.html {
+  width: 60%;
+  border-radius: 15px;
+  animation: html 8s;
+}
+@keyframes html {
+  0% {
+    width: 0;
+  }
+  25% {
+    width: 0;
+  }
+}
+.css {
+  width: 50%;
+  border-radius: 15px;
+  animation: html 8s;
+}
+.js {
+  width: 40%;
+  border-radius: 15px;
+  animation: html 8s;
+}
+.vs {
+  width: 70%;
+  border-radius: 15px;
+  animation: html 8s;
+}
+.git {
+  width: 60%;
+  border-radius: 15px;
+  animation: html 8s;
+}
+.contact h1 {
+  color: rgb(129, 189, 230);
+  text-align: center;
+  font-size: 34px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.contact-me {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.contact-me div {
+  margin-bottom: 20px;
+}
+.contact-me div h3 {
+  font-size: 24px;
+  color: aqua;
+  margin-bottom: 8px;
+}
+.contact-me div p {
+  color: white;
+  font-size: 16px;
+}
+.icons {
+  text-align: center;
+  padding: 20px;
+  margin-top: -20px;
+  border-bottom: 2px solid white;
+}
+.icons div {
+  background-color: rgb(162, 211, 206);
+  border-radius: 10px;
+  padding: 5px 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 10px;
+}
+.icons a {
+  font-size: 40px;
+  color: black;
+}
+
+.copyright {
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .bar {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .skills div h3 {
+    margin-left: 110px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .skills div h3 {
+    margin-left: 70px;
+  }
+  .contact-me {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bar {
+    width: 100%;
+  }
+  .skills div h3 {
+    margin-left: 0px;
+  }
+}
